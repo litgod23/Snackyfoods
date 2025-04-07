@@ -1,0 +1,495 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ffcb2f, #ffb812);
+  color: #333;
+}
+
+.hero-banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+h1,
+h2,
+h3 {
+  background-color: rgba(255, 184, 18, 0.9);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+/* Logo */
+.logo img {
+  height: 90px; /* Increase size */
+  margin-bottom: -35px; /* Extends half below the header */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+}
+
+/* Updated Button Styling */
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 50px; /* Makes it oval */
+  border: 2px solid orange; /* Orange outline */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Shop and Cart Container */
+.shop-cart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduce spacing between the button and cart */
+}
+
+/* Shop Button */
+.shop-btn {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange; /* Orange outline */
+  padding: 10px 25px;
+  border-radius: 50px; /* Makes it oval */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Cart Icon in Header */
+.cart-icon {
+  font-size: 1.8em;
+  color: #333;
+  cursor: pointer;
+  margin-right: 0;
+  position: relative; /* Allows absolute positioning for badge */
+}
+
+.cart-icon i {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover i {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: block;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  z-index: 20;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.order-section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.order-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.order-content p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.delivery-apps {
+  background: #fff;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  max-width: 1000px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in;
+}
+
+.delivery-apps h2 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #f39200;
+}
+
+.delivery-apps p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.delivery-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.delivery-icons img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.delivery-icons img:hover {
+  transform: scale(1.1);
+}
+
+.order-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-8px);
+}
+
+.order-card i {
+  font-size: 2.2em;
+  color: #f39200;
+  margin-bottom: 15px;
+}
+
+.order-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.order-cta {
+  margin-top: 40px;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #f39200;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.shop-now-btn i {
+  margin-left: 8px;
+}
+
+.shop-now-btn:hover {
+  background-color: #d67900;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+}
+
+.social-icons a {
+  color: #f39200;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #222;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Base styles (for larger screens) */
+
+/* Mobile Menu Icon - Hide by default on desktop */
+.menu-icon {
+  display: none; /* Initially hide the menu icon */
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  position: relative; /* Ensure relative positioning for centering shop button in mobile */
+}
+
+/* Shop and Cart Container */
+.shop-cart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduce spacing between the button and cart */
+}
+
+/* Shop Button */
+.shop-btn {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange; /* Orange outline */
+  padding: 10px 25px;
+  border-radius: 50px; /* Makes it oval */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Cart Icon in Header */
+.cart-icon {
+  font-size: 1.8em;
+  color: #333;
+  cursor: pointer;
+  margin-right: 0;
+  position: relative; /* Allows absolute positioning for badge */
+}
+
+.cart-icon i {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover i {
+  transform: scale(1.1);
+}
+
+/* Mobile Styles - For screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Header Styling */
+  .header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* Logo */
+  .logo img {
+    height: 70px;
+    margin-bottom: 0;
+  }
+
+  /* Navigation Menu - Initially hidden */
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 20;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Shop and Cart Container */
+  .shop-cart-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .cart-icon {
+    font-size: 1.5em;
+  }
+  .shop-btn {
+    padding: 8px 20px;
+  }
+  /* Order section content (making sure it's not too wide) */
+  .order-section {
+    padding: 40px 15px; /* Adjust padding for smaller screen */
+  }
+
+  .order-content h1 {
+    font-size: 2.2em; /* Smaller font size */
+  }
+
+  .order-content p {
+    font-size: 1em; /* Smaller font size for readability */
+    margin: 0 auto 20px;
+  }
+
+  /* Delivery apps section layout */
+  .delivery-apps {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .delivery-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .delivery-icons img {
+    width: 60px; /* Smaller delivery icons */
+  }
+
+  /* Adjust order options grid to stack for mobile */
+  .order-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for mobile */
+    gap: 20px;
+    margin: 20px auto;
+  }
+
+  /* Order card adjustment */
+  .order-card {
+    padding: 20px;
+  }
+
+  /* Adjust the CTA button */
+  .shop-now-btn {
+    padding: 10px 20px;
+    font-size: 1em; /* Smaller text size */
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-link {
+    font-size: 1.5em;
+  }
+
+  .location {
+    font-size: 1.1em;
+  }
+
+  .copyright {
+    font-size: 1em;
+    opacity: 0.7;
+  }
+
+  /* Fluid scaling for extra small screens */
+  @media (max-width: 480px) {
+    .slide-caption {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+
+    .category {
+      font-size: 0.95em;
+      padding: 6px 12px;
+    }
+  }
+}
+
+/* Hide the menu icon on desktop (above 768px) */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Mobile Menu Toggle */
+@media (max-width: 768px) {
+  .menu-icon.active + .nav-menu {
+    display: flex;
+  }
+}

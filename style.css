@@ -1,0 +1,902 @@
+/* Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 15px 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  border-radius: 10px; /* Optionally, you can add rounded corners */
+  backdrop-filter: blur(
+    10px
+  ); /* Optional: Adds a blur effect to the background */
+}
+
+/* Logo */
+.logo img {
+  height: 90px; /* Increase size */
+  margin-bottom: -35px; /* Extends half below the header */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+}
+
+/* Updated Button Styling */
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 50px; /* Makes it oval */
+  border: 2px solid orange; /* Orange outline */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Shop and Cart Container */
+.shop-cart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduce spacing between the button and cart */
+}
+
+/* Shop Button */
+.shop-btn {
+  background-color: white;
+  color: orange;
+  border: 2px solid orange; /* Orange outline */
+  padding: 10px 25px;
+  border-radius: 50px; /* Makes it oval */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Cart Icon in Header */
+.cart-icon {
+  font-size: 1.8em;
+  color: #333;
+  cursor: pointer;
+  margin-right: 0;
+  position: relative; /* Allows absolute positioning for badge */
+}
+
+.cart-icon i {
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-icon:hover i {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.hero-section h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  color: black;
+}
+
+/* Slideshow styling */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 350px; /* Set a specific height for the container */
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+
+  animation: zoomInSlow 6s ease-in-out forwards;
+}
+@keyframes zoomInSlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Caption Styling */
+.caption {
+  position: absolute;
+  bottom: 90px; /* Move up the caption */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px 25px; /* Adjust padding to make the container more fitting */
+  border-radius: 20px; /* More curved edges */
+  text-align: center;
+  width: auto; /* Adjust width to fit the content */
+  max-width: 80%; /* Limit width to 80% of the container */
+  font-size: 1.9em;
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Dots for Slideshow */
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active,
+.dot:hover {
+  background-color: #333;
+}
+
+.promo-section {
+  background: #fffdee;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1200px;
+  gap: 30px;
+  margin: auto;
+}
+
+.promo-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.promo-text h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.promo-text h2 span {
+  color: #ff6600;
+}
+
+.promo-text .subtitle {
+  font-size: 1em;
+  color: #888;
+  margin: 10px 0;
+}
+
+.promo-text .tagline {
+  font-size: 1.5em;
+  color: #cc5200;
+  margin-top: 10px;
+}
+
+.promo-text .description {
+  font-size: 1em;
+  color: #444;
+  margin-top: 10px;
+}
+
+.promo-btn {
+  margin-top: 20px;
+  background: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.promo-btn:hover {
+  background: #cc5200;
+}
+
+.promo-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.promo-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Product Animation: Fade in & Slide Up */
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; /* Needed for absolute positioning of button */
+  overflow: visible; /* Allow button to extend outside */
+}
+
+.product.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Toggle Effect: Expand Product on Click */
+.product.expanded {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cart badge styling */
+.cart-badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.product p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;
+  margin-top: 5px;
+}
+
+/* Buy Button */
+.buy-btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  border-radius: 999px; /* More modern, pill-style corners */
+  cursor: pointer;
+
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.buy-btn i {
+  font-size: 1em;
+}
+
+.buy-btn:hover {
+  background: #cc5200;
+  transform: translateX(-50%) scale(1.05); /* Slight grow effect */
+}
+
+.see-all-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.see-all-btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.see-all-btn:hover {
+  background-color: #cc5200;
+}
+
+.popular-snacks {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+}
+
+.popular-heading {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.snack-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.snack-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.snack-card:hover {
+  transform: translateY(-5px);
+}
+
+.snack-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.snack-card p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Initial hidden state */
+.snack-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: var(--delay, 0s); /* Allow custom delay for stagger effect */
+}
+
+/* Visible state with delay stagger */
+.snack-card.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Shop Now Container */
+.shop-now-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Shop Now Button */
+.shop-now-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ff6600;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px; /* Rounded button */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.shop-now-btn:hover {
+  background: #cc5200;
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow icon animation */
+.shop-now-btn i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.shop-now-btn:hover i {
+  transform: translateX(5px); /* Moves arrow to the right */
+}
+
+/* Footer Styling */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  padding: 15px 30px; /* Same padding as the header */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  border-radius: 10px; /* Rounded corners */
+  backdrop-filter: blur(10px); /* Blur effect to match header */
+  margin-top: 30px; /* Optional: Space between footer and content */
+}
+
+/* Footer content layout */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between items */
+}
+
+/* Social media icons layout */
+.social-icons {
+  display: flex;
+  gap: 25px; /* Increased gap for better spacing */
+  justify-content: center; /* Ensures icons are centered */
+}
+
+/* Styling for social media links */
+.social-link {
+  color: white;
+  font-size: 2em; /* Larger icon size */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for social media links */
+.social-link:hover {
+  color: orange; /* Orange color when hovered */
+}
+
+/* Location info styling */
+.location {
+  font-size: 1.3em; /* Slightly larger font size */
+  margin-top: 2px;
+  font-style: italic; /* Italics for a more stylish look */
+}
+
+/* Copyright info styling */
+.copyright {
+  margin-top: 3px;
+  font-size: 1.1em;
+  opacity: 0.8;
+  font-weight: lighter; /* Makes the copyright text lighter */
+}
+
+/* Background Container */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #ffcb2f,
+    #ffb812
+  ); /* Slightly darker yellow gradient background */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1; /* Ensure it stays behind all content */
+  pointer-events: none; /* Ensures it doesn't block interaction with other elements */
+}
+
+/* General styling for falling items */
+.falling-item {
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow to all snacks */
+  z-index: -1; /* Place snacks behind the main content */
+  transition: transform 0.3s ease, left 0.5s ease, top 0.5s ease;
+}
+
+/* Snack specific types */
+
+/* Doughnut Styling */
+.doughnut {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #f9c74f 40%, #d9843b 60%, #b66d32 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.3),
+    0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Fries Styling */
+.fries {
+  width: 12px; /* Slightly thicker */
+  height: 55px; /* Adjusted height for a more realistic size */
+  background: linear-gradient(135deg, #ffcc00 50%, #ff9f00 50%);
+  border-radius: 5px;
+  position: relative;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-5deg);
+}
+
+/* Chips Styling */
+.chip {
+  width: 52px;
+  height: 52px;
+  background-color: #fbcb0a;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2),
+    0px 3px 6px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(
+    circle at 30% 30%,
+    #fbcb0a 40%,
+    #f7b600 60%,
+    #e89e00 100%
+  );
+  transform: rotate(10deg);
+}
+
+/* Pizza Styling */
+.pizza {
+  width: 65px;
+  height: 65px;
+  background-color: #ffa60b;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transform: rotate(10deg);
+}
+
+/* Coke Bottle */
+.coke {
+  width: 30px; /* Slimmer bottle */
+  height: 100px; /* Smaller height */
+  background: linear-gradient(
+    to bottom,
+    #b71c1c,
+    #8b0000,
+    #400000
+  ); /* Coke red gradient */
+  position: relative;
+  border-radius: 12px 12px 40% 40%; /* Curved bottle shape */
+  box-shadow: inset 0px -6px 10px rgba(0, 0, 0, 0.4),
+    0px 4px 6px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Random snack position tweak */
+.falling-item {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  z-index: -1; /* Ensure it's behind content */
+  animation: rotate 5s linear infinite; /* Continuous rotation */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional hover effect on h1 */
+h1:hover {
+  color: #ff7f32; /* Change color to orange on hover */
+  transform: translateY(-5px); /* Slightly move up */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Optional hover effect on p */
+p:hover {
+  color: #333; /* Change color to dark grey on hover */
+  transform: translateY(-5px); /* Slightly move up */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Mobile Styles - For screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Header Styling */
+  .header {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* Logo */
+  .logo img {
+    height: 70px;
+    margin-bottom: 0;
+  }
+
+  /* Navigation Menu - Initially hidden */
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 20;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* Shop and Cart Container */
+  .shop-cart-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .cart-icon {
+    font-size: 1.5em;
+  }
+  .shop-btn {
+    padding: 8px 20px;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    margin: 20px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-section p {
+    font-size: 1.3em;
+  }
+
+  /* Slideshow */
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .slide-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 1em;
+    max-width: 90%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    word-wrap: break-word;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .product img {
+    height: 150px;
+  }
+
+  /* Category Menu */
+  .menu-categories {
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .category {
+    display: block;
+    padding: 8px 15px;
+    font-size: 1em;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .category:hover {
+    background: #ff7f32;
+    color: white;
+    transform: scale(1);
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-link {
+    font-size: 1.5em;
+  }
+
+  .location {
+    font-size: 1.1em;
+  }
+
+  .copyright {
+    font-size: 1em;
+    opacity: 0.7;
+  }
+
+  /* Fluid scaling for extra small screens */
+  @media (max-width: 480px) {
+    .slide-caption {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+
+    .category {
+      font-size: 0.95em;
+      padding: 6px 12px;
+    }
+  }
+}
+
+/* Hide the menu icon on desktop (above 768px) */
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Mobile Menu Toggle */
+@media (max-width: 768px) {
+  .menu-icon.active + .nav-menu {
+    display: flex;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 50px;
+  color: #333;
+  animation: fadeInUp 1s ease-out forwards;
+}
